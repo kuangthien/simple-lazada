@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 export default class Top extends Component {
   render() {
@@ -8,12 +9,22 @@ export default class Top extends Component {
           <div className="d-flex flex-column py-2 py-md-5">
             <h1 className="text-logo text-center">Dazola</h1>
             <nav className="my-2 my-md-0 mr-md-3 text-center">
-              <a className="p-2 text-light" href="/">
+              <Link
+                className="p-2 text-light"
+                to={{
+                  pathname: `/`
+                }}
+              >
                 Home
-              </a>
-              <a className="p-2 text-light" href="/products">
+              </Link>
+              <Link
+                className="p-2 text-light"
+                to={{
+                  pathname: `/products`
+                }}
+              >
                 Products
-              </a>
+              </Link>
             </nav>
           </div>
         </div>
