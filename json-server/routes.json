@@ -1,4 +1,4 @@
 {
-  "/api/product/:id": "/products?_id=:id&singular=1",
-  "/api/*": "/$1"
+  "/api/*": "/$1",
+  "/product/:id": "/products?_id=:id&singular=1"
 }
