@@ -31,3 +31,19 @@
     transform: rotate(360deg);
   }
 }
+
+$grid-breakpoints: (
+	xs: 0,
+	sm: 40rem,
+	md: 52rem,
+	lg: 64rem,
+	xl: 90rem,
+);
+$container-max-widths: (
+	sm: 38rem,
+	md: 50rem,
+	lg: 62rem,
+	xl: 88rem,
+);
+@import '../../../node_modules/bootstrap-scss/bootstrap.scss';
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600');
