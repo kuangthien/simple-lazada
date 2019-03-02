@@ -1,49 +1,58 @@
-.App {
-  text-align: center;
-}
+// Override default variables before the import
+$body-bg: #f1f1f1;
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
+$border-radius: 0.15rem !default;
+$border-radius-lg: 0.2rem !default;
+$border-radius-sm: 0.1rem !default;
+$grid-gutter-width: 20px  ;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.container-fluid {
+  max-width: 1440px;
 }
+.home-landing {
+  .img {
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: 50%;
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+    &:before {
+      content: "";
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      position: absolute;
+      background: rgba(#000, 0.2);
+    }
   }
 }
 
-$grid-breakpoints: (
-	xs: 0,
-	sm: 40rem,
-	md: 52rem,
-	lg: 64rem,
-	xl: 90rem,
-);
-$container-max-widths: (
-	sm: 38rem,
-	md: 50rem,
-	lg: 62rem,
-	xl: 88rem,
-);
-@import '../../../node_modules/bootstrap-scss/bootstrap.scss';
-@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600');
+.article-detail {
+  .content {
+    font-size: 1.2rem;
+  }
+}
+
+@import "../../../node_modules/bootstrap-scss/bootstrap.scss";
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600");
+
+@import "../../../node_modules/bootstrap-scss/mixins/breakpoints";
+
+@for $i from 10 through 52 {
+  .fz-#{$i} {
+    font-size: #{$i}px;
+  }
+  .fz-sm-#{$i} {
+    @include media-breakpoint-up(sm) {
+      font-size: #{$i}px;
+    }
+  }
+  .fz-md-#{$i} {
+    @include media-breakpoint-up(md) {
+      font-size: #{$i}px;
+    }
+  }
+}
