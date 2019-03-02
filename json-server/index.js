@@ -13,6 +13,7 @@ module.exports = () => {
       _id: faker.random.uuid(),
       imageUrl: 'https://loremflickr.com/320/240/fashion?random='+i,
       title: faker.commerce.productName(),
+      desc:faker.commerce.product(),
       prices: {
         regular: price,
         old: price * 0.6,
