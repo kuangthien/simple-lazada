@@ -11,8 +11,8 @@ export default class PageLanding extends Component {
             }}
           />
           <div className="position-relative text-light">
-            <div className="col-md-5 p-lg-5 mx-auto my-1 my-md-5">
-              <h1 className="fz-18 fz-md-25 font-weight-normal">Đồ chơi mô hình</h1>
+            <div className="col-md-5 p-lg-4 mx-auto my-1 my-md-2">
+              <h1 className="fz-18 fz-md-32 font-weight-normal">Đồ chơi mô hình</h1>
             </div>
           </div>
         </div>

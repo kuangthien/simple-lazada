@@ -1,0 +1,22 @@
+@import "../../../node_modules/bootstrap-scss/bootstrap-reboot.scss";
+
+ 
+.buffer-action {
+  height: 60px;
+}
+.action-wrapper {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba($color: #ccc, $alpha: 0.6);
+}
+.btn.btn-add-to-cart {
+  background: #f57224;
+  color: #fff;
+  @include media-breakpoint-up(md) {
+    background: #f57224;
+    color: #fff;
+    min-width: 160px
+  }
+}
