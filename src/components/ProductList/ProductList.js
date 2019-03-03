@@ -11,20 +11,21 @@ const API_URL = process.env.REACT_APP_API_URL;
 const Item = props => {
   const { product, goToDetail } = props;
   const { regular, old, saleRatio } = product.prices;
-
   return (
     <div className="card mb-4 box-shadow border-0 product-item">
       <div className="card-img-top" alt="">
         <b
           className="img d-block"
           style={{
-            backgroundImage: `url(${process.env.REACT_APP_IMAGES_URL}${product.imageUrl})`
+            backgroundImage: `url(${process.env.REACT_APP_IMAGES_URL || ""}${product.imageUrl})`
           }}
         />
       </div>
 
       <div className="card-body p-2">
-        <p className="card-title font-weight-bold fz-12 fz-sm-16 fz-md-20" data-testid="product-name">{product.title}</p>
+        <p className="card-title font-weight-bold fz-12 fz-sm-16 fz-md-20" data-testid="product-name">
+          {product.title}
+        </p>
         <div className="fz-14 fz-sm-18  ">
           <div className="text-danger font-weight-bold">{formatNumber(regular)} đ</div>
           <div className="text-muted">
