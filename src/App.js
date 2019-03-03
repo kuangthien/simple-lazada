@@ -1,28 +1,33 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component, Fragment } from "react";
+import { BrowserRouter as Router } from "react-router-dom";
 
+import { Route } from "react-router-dom";
+
+import Top from "./components/Top";
+import Category from "./pages/Category";
+import Home from "./pages/Home";
+import Product from "./pages/Product";
+
+import "./assets/styles/App.scss";
+
+const AppWrapper = () => (
+  <Router>
+    <App />
+  </Router>
+);
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Fragment>
+        <Top />
+        <div className="my-4">
+          <Route path="/product/:id" component={Product} />
+          <Route path="/products" component={Category} />
+          <Route path="/" exact component={Home} />
+        </div>
+      </Fragment>
     );
   }
 }
 
-export default App;
+export default AppWrapper;

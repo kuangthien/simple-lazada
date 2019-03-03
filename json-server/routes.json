@@ -1,0 +1,4 @@
+{
+  "/api/*": "/$1",
+  "/product/:id": "/products?_id=:id&singular=1"
+}

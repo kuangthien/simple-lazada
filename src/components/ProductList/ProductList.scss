@@ -1,0 +1,28 @@
+.product-item {
+  position: relative;
+  overflow: hidden;
+  .card-img-top {
+    overflow: hidden;
+    .img {
+      height: 140px;
+      width: 100%;
+      background-position: 50%;
+      background-size: cover;
+    }
+  }
+  .link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(#000, 0.1);
+    opacity: 0;
+  }
+
+  &:hover {
+    .link {
+      opacity: 1;
+    }
+  }
+}
