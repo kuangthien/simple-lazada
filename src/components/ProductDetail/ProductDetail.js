@@ -22,7 +22,14 @@ const ProductDetail = props => {
             <div className="row">
               <div className="col-12 col-md-6">
                 <div className="d-flex align-items-center justify-content-start    ">
-                  <img src={product.imageUrl} alt="" height="auto" minheight="100%" width="100%" className="bg-dark" />
+                  <img
+                    src={`${process.env.REACT_APP_IMAGES_URL}${product.imageUrl}`}
+                    alt=""
+                    height="auto"
+                    minheight="100%"
+                    width="100%"
+                    className="bg-dark"
+                  />
                 </div>
               </div>
               <div className="col-12 col-md-6">
@@ -33,7 +40,7 @@ const ProductDetail = props => {
                   </div>
                 </div>
                 <div className="d-none d-md-block">
-                  <hr/>
+                  <hr />
                   <div className="  p-2 text-right">
                     <button className="btn   btn-add-to-cart">Mua</button>
                   </div>

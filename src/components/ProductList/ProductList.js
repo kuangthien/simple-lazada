@@ -11,14 +11,14 @@ const API_URL = process.env.REACT_APP_API_URL;
 const Item = props => {
   const { product, goToDetail } = props;
   const { regular, old, saleRatio } = product.prices;
-
+ 
   return (
     <div className="card mb-4 box-shadow border-0 product-item">
       <div className="card-img-top" alt="">
         <b
           className="img d-block"
           style={{
-            backgroundImage: `url(${product.imageUrl})`
+            backgroundImage: `url(${process.env.REACT_APP_IMAGES_URL}${product.imageUrl})`
           }}
         />
       </div>
