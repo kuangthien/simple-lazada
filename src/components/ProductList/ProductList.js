@@ -11,7 +11,6 @@ const API_URL = process.env.REACT_APP_API_URL;
 const Item = props => {
   const { product, goToDetail } = props;
   const { regular, old, saleRatio } = product.prices;
-  const { reviews } = product.additionalInfo;
 
   return (
     <div className="card mb-4 box-shadow border-0 product-item">
